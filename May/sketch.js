@@ -41,7 +41,7 @@ function setup() {
 
 
 function draw() {
-  background(0)
+  background(0);
   noStroke();
   fill(255);
   drawNet();
@@ -50,6 +50,7 @@ function draw() {
   ballPosition.add(ballVelocity);
   drawBall(ballPosition.x,ballPosition.y);
   edgeCollision();
+  hit();
 
 }
 
