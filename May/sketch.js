@@ -109,7 +109,13 @@ function ballCollision() {
 }
 
 
-function hit(){}
+function hit(){
+  var collide = collideRectCircle(paddlePosition.x, paddlePosition.y, 15,75,ballPosition.x,ballPosition.y,20);
+  if(collide) {
+    ballVelocity.add(paddleVelocity);
+    ballVelocity.mult(-1);
+  }
+}
 
 function drawNet(){
   rect(w/2-10,0,10,h);
