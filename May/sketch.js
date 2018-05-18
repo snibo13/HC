@@ -56,17 +56,17 @@ function draw() {
 function keyPressed() {
   console.log(keyCode);
   console.log(paused);
-  if(keyCode == 80) {
-    paused = !paused;
-    if(paused) {
-      textSize(100);
-      text('PAUSED',w/2,h/2);
-      fill(255);
-      noLoop();
-    } else if (!paused) {
-      loop();
-    }
-  }
+  // if(keyCode == 80) {
+  //   paused = !paused;
+  //   if(paused) {
+  //     textSize(100);
+  //     text('PAUSED',w/2,h/2);
+  //     fill(255);
+  //     noLoop();
+  //   } else if (!paused) {
+  //     loop();
+  //   }
+  // }
 
 }
 
