@@ -108,11 +108,12 @@ function ballCollision() {
   }
 }
 
+var hit = false;
 
-function hit(){
-  var collide = collideRectCircle(paddlePosition.x, paddlePosition.y, 15,75,ballPosition.x,ballPosition.y,10);
-  console.log(collide);
+function paddleHit(){
+  hit = collideRectCircle(paddlePosition.x, paddlePosition.y, 15,75,ballPosition.x,ballPosition.y,10);
   if(collide) {
+    alert(paddlePosition.x,ballPosition.x);
     ballVelocity.add(paddleVelocity);
     ballVelocity.mult(-1);
   }
