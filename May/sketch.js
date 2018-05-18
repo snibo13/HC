@@ -14,7 +14,6 @@ var accelRight;
 var accelUp;
 var accelDown;
 
-
 var paused = false;
 
 function setup() {
@@ -111,7 +110,8 @@ function ballCollision() {
 
 
 function hit(){
-  var collide = collideRectCircle(paddlePosition.x, paddlePosition.y, 15,75,ballPosition.x,ballPosition.y,20);
+  var collide = collideRectCircle(paddlePosition.x, paddlePosition.y, 5,75,ballPosition.x,ballPosition.y,20);
+  console.log(collide);
   if(collide) {
     ballVelocity.add(paddleVelocity);
     ballVelocity.mult(-1);
